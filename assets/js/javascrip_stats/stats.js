@@ -1,13 +1,9 @@
-function stats() {
+var el = document.getElementById("menu_stat");
+el.addEventListener("click", function() {
     let moneymoney = JSON.parse(localStorage.getItem('moneymoney'));
-    let from = document.getElementById('datefrom').value;
-    let to = document.getElementById('dateto').value;
     let total = 0;
-    let variant = 0;
     let classic = 0;
-    let accessories = 0;
     moneymoney.forEach((moneymoney, index) => {
-        console.log(from)
         const convertToShortDate = dateTimeString => {
             const [timePart, datePart] = dateTimeString.split(" ");
             const [day, month, year] = datePart.split("/");
@@ -22,10 +18,8 @@ function stats() {
         else {
             classic = classic + (Number(moneymoney.prePrice) - (Number(moneymoney.prePrice) * Number(moneymoney.salePercent) / 100)) * Number(moneymoney.count);
         }
+        console.log(classic)
     })
-    total = classic + variant + accessories;
-    document.getElementById('cost_classic').innerHTML = classic + '$';
-    document.getElementById('cost_variant').innerHTML = variant + '$';
-    document.getElementById('cost_accessories').innerHTML = accessories + '$';
+    total = classic;
     document.getElementById('total_stat').innerHTML = total + '$';
-}
+}); 

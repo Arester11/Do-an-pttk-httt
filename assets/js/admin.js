@@ -40,7 +40,6 @@ function Product()
     document.getElementById('menu_user').style.color="#d4b0b5";
 
     document.getElementById('admin_mode').style.display='none';
-    resetstat();
 }
 function Stat()
 {
@@ -65,7 +64,6 @@ function Stat()
 
     document.getElementById('admin_mode').style.display='none';
     cancelimport();
-    resetstat();
 }
 function Order()
 {
@@ -91,7 +89,6 @@ function Order()
 
     document.getElementById('admin_mode').style.display='none';
     cancelimport();
-    resetstat();
 }
 function User()
 {
@@ -116,7 +113,6 @@ function User()
 
     document.getElementById('admin_mode').style.display='none';
     cancelimport();
-    resetstat();
 }
 function resetstat(){
     document.getElementById('datefrom').value="";
