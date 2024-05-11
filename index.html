@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lí Thư Viện</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2-web/css/all.min.css">
+    <!-- normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/css_productsmanager/import.css">
+    <link rel="stylesheet" href="./assets/css/css_productsmanager/list_products.css">
+    <link rel="stylesheet" href="./assets/css/admin.css">
+    <link rel="stylesheet" href="./assets/css/user.css">
+    <link rel="stylesheet" href="./assets/css/css_stats/stats.css">
+    <link rel="stylesheet" href="./assets/css/css_productsmanager/body.css">
+    <link rel="stylesheet" href="./assets/css/css_user/logging.css">
+    <link rel="stylesheet" href="./assets/css/css_user/um.css">
+    <link rel="stylesheet" href="./assets/css/css_cart/layouts/modal.css">
+    <link rel="stylesheet" href="./assets/css/css_cart/pages/cart-list.css">
+    <link rel="stylesheet" href="./assets/css/css_cart/layouts/toast.css">
+    <link rel="stylesheet" href="./assets/css/css_cart/layouts/form.css">
+
+</head>
+
+<body>
+    <div class="shop">
+        <div class="header">
+            <nav class="header-body grid">
+                <div class="header__logo" onclick="home()">
+                    <span> <img class="header__logo-img" src="./assets/img/cube2.png" alt="logo-img"> </span>
+                    <div class="header__logo--strong-text">Lối nhỏ sách lạ</div>
+                </div>
+
+                <div class="header__home">
+                    <i class="fa-solid fa-house" onclick="home()"></i>
+                </div>
+
+                <div class="header__search">
+                    <div class="header__search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <input id="header-search-input" class="header__search-input" type="text" id="search"
+                        placeholder="Search here..." autocomplete="off" oninput="searchname()" />
+                    <div class="search-recommend-btn">
+                        <i class="fa-solid fa-caret-down" id="down_arrow"></i>
+                    </div>
+                    <div class="search-recommend hidden" id="product_search">
+                        <div class="search-recommend__list"></div>
+                    </div>
+                </div>
+                <div class="search-layout hidden"></div>
+
+
+                <div class="header__cart" id="header__cart">
+                    <i class="fa-solid fa-cart-shopping" onclick="cart_user()"></i>
+                </div>
+
+                <div class="header__logging"></div>
+            </nav>
+        </div>
+        <div class="signup">
+            <div class="form unactive">
+                <form action="" class="myform-2">
+                    <div class="box">
+                        <div class="title">
+                            <img src="./assets/img/cube2.png" alt="" class="title__img">
+                            <div class="RBS">Rubik Shop</div>
+                        </div>
+                        <div class="CAA">Create account</div>
+                        <div class="LIGS">Let's get started!</div>
+                        <diV class="__form">
+                            <div class="input">
+                                <label class="size_label">Name</label>
+                                <input onclick="document.getElementById('checkname').style.display = 'none'"
+                                    id="username" type="text" class="form_input_user">
+                                <div class="check" id="checkname">please enter name</div>
+                            </div>
+                            <div class="input ">
+                                <label class="size_label">Phone</label>
+                                <input onclick="document.getElementById('checkphone_').style.display = 'none'"
+                                    id="phone" type="number" class="form_input">
+                                <div class="check" id="checkphone_">please enter phone</div>
+                            </div>
+                            <div class="input">
+                                <label class="size_label">Password</label>
+                                <input onclick="document.getElementById('checkpass_').style.display = 'none'" id="pass"
+                                    type="password" class="form_inputs" autocomplete="on">
+                                <div class="check" id="checkpass_">please enter pass</div>
+                            </div>
+                            <button class="btn_user">SIGN UP</button>
+                        </diV>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="login">
+            <div class="form_1 unactive">
+                <form action="" class="myform-1">
+                    <div class="box">
+                        <div class="title">
+                            <img src="./assets/img/cube2.png" alt="" class="title__img">
+                            <div class="RBS">Rubik Shop</div>
+                        </div>
+                        <div class="WCB">Welcome back!</div>
+                        <div class="LIGS">Let's get started!</div>
+                        <div class="__form">
+                            <div class="input">
+                                <label for="fullname">Phone</label>
+                                <input onclick="document.getElementById('checklog').style.display = 'none'"
+                                    oninput="document.getElementById('checkphone').style.display = 'none'"
+                                    id="phone_user" type="number" class="form_input_user">
+                                <div class="check" id="checkphone"></div>
+                            </div>
+                            <div class="input">
+                                <label for="fullname">Password</label>
+                                <input onclick="document.getElementById('checklog').style.display = 'none'"
+                                    oninput="document.getElementById('checkpass').style.display = 'none'" id="pass_user"
+                                    type="password" class="form_input" autocomplete="off">
+                                <div class="check" id="checkpass"></div>
+                            </div>
+                            <button class="btn_user">SIGN IN</button>
+                            <div class="check" id="checklog">wrong phone or password</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <main onclick="exitlogging()">
+            <div class="admin" id="admin">
+                <div id="topmenu" class="topmenu">
+                    <div class="admin_menu">
+                        <div class="admin_topmenu" id="menu_stat" onclick="Stat()">Stats Management</div>
+                        <div class="admin_topmenu" id="menu_order" onclick="Order()">Purchased Order</div>
+                        <div class="admin_topmenu" id="menu_user" onclick="User()">User Management</div>
+                        <div class="admin_topmenu" id="menu_product" onclick="Product()">Products Management</div>
+                    </div>
+                </div>
+                <div class="admin_mode" id="admin_mode">Welcome admin mode!</div>
+                <div class="admin_stat" id="admin_stat">
+                    <div class="nametag">Revenue Statistic</div>
+                    <div class="date">
+                        <div class="fromdate">
+                            From:
+                            <input type="date" id="datefrom" oninput="stats()">
+                        </div>
+                        <div class="todate">
+                            To:
+                            <input type="date" id="dateto" oninput="stats()">
+                        </div>
+                    </div>
+                    <div class="stat_container">
+                        <div class="tablerevenue">Gross profit</div>
+                        <div class="tablerevenue_total">
+                            <label class="label_container">Total:</label>
+                            <div class="total_stat" id="total_stat">0$</div>
+                            </br>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin_product" id="admin_product">
+                    <div class="tileproduct">Products Management</div>
+                    <div class="typeandimport">
+                        <div class="type" id="type">
+                            <div class="nametype">Type</div>
+                            <select id="sort" onchange="sortlist()">
+                                <option>All</option>
+                                <option>Classic</option>
+                                <option>Variant</option>
+                                <option>Accessories</option>
+                            </select>
+                        </div>
+                        <div class="import">
+                            <button onclick="showimport()" id="showcontain">Import</button>
+                            <button onclick="cancelimport()" id="cancelcontain" class="cancelimport">Cancel</button>
+                        </div>
+                    </div>
+                    <div id="import_table" class="formproduct">
+                        <div>
+                            <h3>Import product</h3>
+                        </div>
+                        <form>
+                            <div class="container">
+                                <div>
+                                    <label>Image 1:</label>
+                                    <input class="import-input" type="text" id="imagePrimary" placeholder="Url Image" />
+                                    </br>
+                                </div>
+                                <div>
+                                    <label>Image 2:</label>
+                                    <input class="import-input" type="text" id="imageSecondary" placeholder="Url Image" />
+                                    </br>
+                                </div>
+                                <div>
+                                    <label>Name</label>
+                                    <input class="import-input" type="text" id="name" placeholder="Name User" />
+                                    </br>
+                                </div>
+                                <div>
+                                    <label>Description</label>
+                                    <input class="import-input" type="text" id="desc"
+                                        placeholder="Product Information" />
+                                    </br>
+                                </div>
+                                <div>
+                                    <label>Type</label>
+                                    <select id="classify">
+                                        <option>Choose</option>
+                                        <option>Classic</option>
+                                        <option>Variant</option>
+                                        <option>Accessories</option>
+                                    </select>
+                                    </br>
+                                </div>
+                                <div>
+                                    <label>Price</label>
+                                    <input class="import-input" type="number" id="prePrice" placeholder="USD" />
+                                    </br>
+                                </div>
+                                <div>
+                                    <label>Sale</label>
+                                    <input class="import-input" type="number" id="salePercent"
+                                        placeholder="SalePercent" />
+                                    </br>
+                                </div>
+                                <div class="errorandreset">
+                                    <div class="notierror" id="error">
+                                        <div><span id="eror-imagePrimary" class="eror"></span></div>
+                                        <div><span id="eror-imageSecondary" class="eror"></span></div>
+                                        <div><span id="eror-name" class="eror"></span></div>
+                                        <div><span id="eror-desc" class="eror"></span></div>
+                                        <div><span id="eror-type" class="eror"></span></div>
+                                        <div><span id="eror-prePrice" class="eror"></span></div>
+                                        <div><span id="eror-salePercent" class="eror"></span></div>
+                                    </div>
+                                    <input id="resetform" type="reset" value="" src="reset.png">
+                                </div>
+                            </div>
+                        </form>
+                        <div><input id="index" type="hidden"></div>
+                        <button id="saveproduct" onclick="save()">Save</button>
+                        <button id="update" onclick="changelist()" style="display: none;">Update</button>
+                    </div>
+                    <div class="product_list">
+                        <table id="list-product">
+                        </table>
+                    </div>
+                    <div class="found" id="found"></div>
+                    <div class="notice_product" id="notice_product"></div>
+                </div>
+                <div class="admin_order" id="admin_order">
+                    <div class="content" id="content">
+                        <div>
+                            <div class="porder">Purchased Order</div>
+                            <div class="wattingandshipping">
+                                <div class="waiting packaging" id="packaging" onclick="render()">Borrow</div>
+                                <div class="waiting shipping" id="shipping" onclick="rendershipping()">Back</div>
+                                <div class="waiting shipping money" id="shipping" onclick="rendermoney()">Processed</div>
+                            </div>
+                            <div class="main" id="main">
+                            </div>
+                        </div>
+                        <div class="tablecontainer">
+                            <table id="order"></table>
+                        </div>
+                    </div>
+
+                    <div id="notice" class="notice"></div>
+                </div>
+                <div class="admin_user" id="admin_user">
+                    <div>
+                        <h3> User Management</h3>
+                    </div>
+                    <table id="management_users"></table>
+                    <div class="ays__"></div>
+                </div>
+            </div>
+            <div class="user_cart" id="user_cart">
+                <h1 class="cart-list__title">Your request</h1>
+                <section class="cart-list">
+                </section>
+                <div class="cart-list__payment">
+                    <div class="cart-list__btn-payment">
+                        <a class="btn btn--payment" onclick="home()">Home</a>
+                        <div class="btn btn--payment clear">Clear cart</div>
+                    </div>
+                    <div class="cart-list__buy">
+                        <div>
+                            <span class="cart-list__total">Total: </span>
+                            <span class="cart-list__total-price">0</span>
+                        </div>
+                        <button class="btn btn--payment buy">procced to Checkout</button>
+                    </div>
+                </div>
+                <section class="modal hidden">
+                    <div class="modal__select-size">
+                        <span class="modal__close-icon">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                        <div class="modal__content">
+
+                        </div>
+                    </div>
+                    <div class="overlay"></div>
+                </section>
+                <div id="toast"></div>
+            </div>
+            <div class="order_user_cart" id="order_user_cart">
+                <h1 class="cart-list__title">Your Orders</h1>
+                <div class="order-button">
+                    <div class="order-button__packaging">Borrow</div>
+                    <div class="order-button__shipping">Back</div>
+                </div>
+                <section class="cart-list-order">
+                </section>
+                <div class="cart-list__payment">
+                    <div class="cart-list__btn-payment">
+                        <a class="btn btn--payment" onclick="home()">Home</a>
+                    </div>
+                </div>
+                <div class="order__buy-total">
+                    <div>
+                        <span class="cart-list__total">Total: </span>
+                        <span class="cart-list__total-price-order">0</span>
+                    </div>
+                </div>
+                <div id="toast"></div>
+            </div>
+            <input type="button" id="exitnotice_product" class="exitnotice_product" onclick="noticeno()">
+            <div class="grid" id="grid_index">
+                <div class="banner">
+                    <img class="banner-img">
+                </div>
+                <div class="classifier__list">
+                    <div class="filter-box">
+                        <h3>FILTER</h3>
+                        <form class="filter-body" name="filter">
+                            <lable class="filter__product-name">
+                                Product name:
+                                <input type="text" placeholder="Rubik" name="product_name">
+                            </lable>
+                            <div class="filter__select-type" id="filter__all">
+                                <label class="filter-form-lable">
+                                    <input type="checkbox" value="" name="typeAll" checked>
+                                    All
+                                </label>
+                                <label class="filter-form-lable">  
+                                    <input type="checkbox" value="Classic" name="typeClassic">
+                                    Hot
+                                </label>
+                            </div>
+                            
+                            <div class="filter__range">
+                                <label class="filter-form-lable"> Use range <input type="checkbox" name="use-range" id="filter-range-checkbox"></label>
+                                <div class="filter-bound filter-bound--disable">From: <input type="number" min=0 name="from" value=0>$</div>
+                                <div class="filter-bound filter-bound--disable">To: <input type="number" min=0 name="to" value=10>$</div>
+                                <label class="filter-form-lable">On sale<input type="checkbox" name="on-sale"></label>
+                            </div>
+                            
+                            <button class="filter__submit-btn" type="submit">Confirm</button>
+                        </form>
+                    </div>
+                    <button class="classifier__item classifier__item--advanced-filter">
+                        Filter
+                    </button>
+                    <button class="classifier__item classifier__item--all inUse">
+                        All
+                    </button>
+                    <button class="classifier__item classifier__item--classic-filter" value="Classic">
+                        Classic
+                    </button>
+                </div>
+
+                <div class="list-title">FOUND PRODUCT</div>
+
+                <ul class="list-product"></ul>
+
+                <div class="pagination">
+                    <i class="fa-solid fa-arrow-left pagination__icon pagination__icon--left"></i>
+                    <div class="pagination__list"></div>
+                    <i class="fa-solid fa-arrow-right pagination__icon pagination__icon--right"></i>
+                </div>
+
+                <div class="goto-btn" title="Go to top">
+                    <i class="fa-solid fa-circle-arrow-up"></i>
+                </div>
+
+            </div>
+
+    </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">Copyright © 2023 Group 5 | Built with VS Code by Group 5.</p>
+    </footer>
+
+    <div class="product-detail">
+        <div class="product-detail__layout"></div>
+        <div class="product-detail__body">
+            <div class="product-detail__img"></div>
+            <div class="product-detail__container">
+                <div class="product-detail__name"> Rubik Name </div>
+                <div class="product-detail__wrapper">
+                    <table class="product-detail__info-table">
+                        <tr>
+                            <td style="font-weight: bold;">Brand</td>
+                            <td class="detail-brand">Helios</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Type</td>
+                            <td class="detail__product-type">Classic</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Components</td>
+                            <td class="detail__product-components">Plastic, Magnet</td>
+                        </tr>
+                    </table>
+                    <div class="product-detail__decription"></div>
+                </div>
+                <div class="product-detail__cart">
+                    <div class="product-detail-prices"></div>
+                    <div class="detail-cart-button" title="Thêm vào giỏ hàng">
+                        <i class="fa-solid fa-cart-shopping cart__icon"></i>
+                    </div>
+                </div>
+                <div class="detail-exit-button">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    <script type="module" src="./assets/js/classify.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/search.js"></script>
+    <script src="./assets/js/javascip_productsmanager/editanddelete.js"></script>
+    <script src="./assets/js/javascip_productsmanager/functions.js"></script>
+    <script src="./assets/js/javascip_productsmanager/getelement_import.js"></script>
+    <script src="./assets/js/javascip_productsmanager/render.js"></script>
+    <script src="./assets/js/admin.js"></script>
+    <script src="./assets/js/user.js"></script>
+    <script src="./assets/js/javascrip_stats/stats.js"></script>
+    <script src="./assets/js/javascrip_order/add.js"></script>
+    <script src="./assets/js/javascrip_order/delete.js"></script>
+    <script src="./assets/js/javascrip_order/render.js"></script>
+    <script type="module" src="./assets/js/javascip_productsmanager/import_product.js"></script>
+    <script src="./assets/js/javascrip_user/log_in.js"></script>
+    <script src="./assets/js/javascrip_user/nameUsers.js"></script>
+    <script src="./assets/js/javascrip_user/Sign_up.js"></script>
+    <script src="./assets/js/javascrip_user/user_management.js"></script>
+    <script type="module" src="./assets/js/js_cart/initLocalStorage.js"></script>
+    <script type="module" src="./assets/js/js_cart/toast.js"></script>
+    <script type="module" src="./assets/js/js_cart/user/modal.js"></script>
+    <script type="module" src="./assets/js/js_cart/user/cart/cart-list.js"></script>
+    <script type="module" src="./assets/js/js_cart/user/order/order.js"></script>
+</body>
+
+</html>

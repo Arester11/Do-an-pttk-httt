@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+.shop
+{
+    min-height: calc(100vh - 60px);
+    padding-bottom: 30px;
+}
+.nametag
+{
+    margin-top: 50px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.fromdate
+{
+      
+    font-size: 20px;
+    color: #1c1c39;
+}
+.todate
+{
+    font-size: 20px;
+    color: #1c1c39;
+}
+.fromdate input
+{
+    font-size: 20px;
+    height: 40px;
+    border: solid 3px #1c1c39;
+    border-radius: 30px;
+    color: #1c1c39;
+    width: 200px;
+    outline: none;
+    padding:10px;
+}
+
+.todate input
+{
+    font-size: 20px;
+    height: 40px;
+    border: solid 3px #1c1c39;
+    border-radius: 30px;
+    color: #1c1c39;
+    width: 200px;
+    outline: none;
+    padding:10px;
+}
+.tablerevenue
+{
+    color: #1c1c39;
+    font-size: 15px;
+    height: 40px;
+    font-size: x-large;
+    border-bottom: #1c1c39 solid 4px;
+    margin-top: 60px;
+}
+.tablerevenue_total
+{
+    color: #1c1c39;
+    font-size: 15px;
+    height: 20px;
+    font-size: x-large;
+    border-top: #1c1c39 solid 4px;
+}
+.label_container
+{
+    width: 150px;
+    float: left;
+    margin-top: 10px;
+}
+.height
+{
+    height: 30px;
+    margin-right: 10px;
+    line-height: 40px;
+    text-align: end;
+}
+.total_stat
+{
+    margin-top: 10px;
+    text-align: end;
+    margin-right: 10px;
+}

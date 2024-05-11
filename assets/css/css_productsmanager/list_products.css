@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+}
+body
+{
+    margin: 0;
+}
+
+/*--------body---------*/
+.tileproduct {
+    font-size: 50px;
+    font-weight: 900;
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.typeandimport {
+    margin: auto;
+    margin-top: 50px;
+    height: 40px;
+    display: flex;
+    min-width: 200px;
+    max-width: 900px;
+}
+
+.type {
+    display: flex;
+    border: 2px solid #d4b0b5;
+    border-radius: 30px;
+    width: 200px;
+    background-color: #1c1c39;
+    padding-left: 20px;
+    font-size: medium;
+}
+
+.nametype {
+    line-height: 35px;
+    width: 0%;
+    color: #d4b0b5;
+}
+
+.type select {
+    outline: none;
+    border-style: hidden;
+    line-height: 40px;
+    margin-left: 30%;
+    border-radius: 30%;
+    font-size: medium;
+    background-color: #1c1c39;
+    color: #d4b0b5;
+    text-align: end;
+    cursor: pointer;
+}
+
+.type option {
+    font-size: medium;
+    line-height: 40px;
+}
+
+.import {
+    margin-left: auto;
+}
+
+.import button {
+    cursor: pointer;
+    border: 2px solid #d4b0b5;
+    border-radius: 30px;
+    width: 200px;
+    background-color: #1c1c39;
+    color: #d4b0b5;
+    padding-right: 15px;
+    text-decoration: none;
+    font-size: medium;
+    height: 40px;
+}
+
+.import button:hover {
+    background-color: #d4b0b5;
+    color: #1c1c39;
+    transition-duration: 0.4s;
+}
+
+.product_list {
+    margin-top: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: medium;
+}
+
+td {
+    border: #1c1c39 solid 3px;
+}
+
+.Name {
+    width: 5%;
+    max-width: 100px;
+    min-width: 100px;
+    word-wrap: break-word;
+}
+
+.Cost,
+.Sale,
+.Edit {
+    width: 5%;
+}
+
+.image1 {
+    width: fit-content;
+    width: 5%;
+}
+
+.eror {
+    color: red;
+}
+
+.tablecontain_product {
+    text-align: center;
+    color: #d4b0b5;
+    background-color: #1c1c39;
+}
+
+.productcontain {
+    text-align: center;
+}
+
+.productcontain button {
+    color: #d4b0b5;
+    background-color: #1c1c39;
+    cursor: pointer;
+}
+
+.productcontain button:hover {
+    color: #1c1c39;
+    transition-duration: 0.4s;
+    background-color: #d4b0b5;
+}
+
+.iconedit {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #1c1c39;
+    font-size: x-large;
+    border-radius: 100%;
+}
+
+.iconedit i {
+    margin: auto;
+    padding-left: 4px;
+}
+
+.iconedit:hover i {
+    color: #1c1c39;
+}
+
+.icontrash {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #1c1c39;
+    font-size: x-large;
+    border-radius: 100%;
+}
+
+.icontrash i {
+    margin: auto;
+}
+
+.icontrash:hover i {
+    color: #1c1c39;
+}
+
+.found {
+    font-size: large;
+    text-align: center;
+    opacity: 50%;
+}
+
+/*--------notice------------*/
+.notice_product {
+    position: fixed;
+    width: 550px;
+    color: #d4b0b5;
+    background-color: #1c1c39;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    text-align: center;
+    height: 250px;
+    font-size: xx-large;
+    padding-top: 60px;
+    z-index: 22;
+    border-radius: 20px;
+    display: none;
+}
+
+.buttonnotice_product{
+    display: flex;
+    width: 40%;
+    margin-left: 23px;
+    margin-top: 70px;
+}
+
+.Yes button {
+    border: #d4b0b5 solid 2px;
+    color: #d4b0b5;
+    font-weight: bold;
+    background-color: #1c1c39;
+    height: 50px;
+    width: 200px;
+    border-radius: 30px;
+}
+
+.Yes button:hover {
+    color: #1c1c39;
+    background-color: #d4b0b5;
+    transition-duration: 0.4s;
+}
+
+.No button:hover {
+    color: #1c1c39;
+    background-color: #d4b0b5;
+    transition-duration: 0.4s;
+}
+
+.No {
+    margin-left: 100px;
+}
+
+.No button {
+    border: #d4b0b5 solid 2px;
+    color: #d4b0b5;
+    font-weight: bold;
+    background-color: #1c1c39;
+    height: 50px;
+    width: 200px;
+    border-radius: 30px;
+}
+
+.exitnotice_product {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    opacity: 30%;
+    background-color: black;
+    display: none;
+    z-index: 21;
+}
+/*-----------mobile-----------------*/

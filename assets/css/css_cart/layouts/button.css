@@ -1,0 +1,111 @@
+.btn--a {
+  text-decoration: none;
+  display: block;
+}
+
+.btn {
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn.btn--sign {
+  width: 100%;
+  border: none;
+  border-radius: 0px;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 20px 0;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.btn.btn--sign:hover {
+  background-color: var(--button-hover);
+  color: white;
+}
+
+.btn.primary {
+  color: var(--text);
+}
+
+.btn.primary:hover {
+  color: var(--text-in-button);
+  background-color: var(--text);
+  border: 1px solid var(--text);
+}
+
+.btn.secondary {
+  color: var(--text);
+}
+
+.btn.secondary:hover {
+  color: var(--text-in-button);
+  background-color: var(--text);
+  border: 1px solid var(--text);
+}
+
+.btn.btn--filter {
+  width: 100%;
+  background-color: var(--text);
+  border: none;
+  border-radius: 0px;
+  text-transform: uppercase;
+  padding: 10px 0;
+  color: white;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.btn.btn--filter:hover {
+  background-color: var(--button-hover);
+}
+
+.btn.btn--cart {
+  width: 100%;
+  border: none;
+  border-radius: 0px;
+  color: black;
+  background-color: #e3e3e3;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn.btn--cart:hover {
+  background-color: var(--button-hover);
+  color: white;
+}
+
+
+
+/* Tablet */
+@media only screen and (max-width: 992px) {
+  .btn {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 576px) {
+  .btn {
+    font-size: 0.8rem;
+    padding: 10px 15px;
+  }
+}
+
+@media only screen and (max-width: 424px) {
+  .btn {
+    font-size: 0.6rem;
+    padding: 8px 5px;
+  }
+}

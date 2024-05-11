@@ -1,0 +1,111 @@
+/*thong tin san pham*/
+.container {
+    margin: auto;
+    width: 100%;
+    color: #d4b0b5;
+}
+
+.container div {
+    padding: 3px;
+    width: 100%;
+}
+
+.formproduct {
+    width: 60%;
+    display: none;
+    border: 3px #d4b0b5 solid;
+    margin: auto;
+    padding: 10px;
+    margin-top: 50px;
+    color: #d4b0b5;
+    background-color: #1c1c39;
+    border-radius: 30px;
+    font-size:medium ;
+}
+
+.formproduct h3 {
+    text-align: center;
+    padding: 0px;
+    margin-top: 0px;
+    color: #d4b0b5;
+    font-size: x-large;
+}
+
+.formproduct label {
+    width: 150px;
+    float: left;
+    line-height: 25px;
+}
+
+.import-input {
+    margin-bottom: 3px;
+    width: 70%;
+    font-size: medium;
+     
+    border-radius: 30px;
+    border: #d4b0b5 3px solid;
+    outline: none;
+    padding-left: 10px;
+    height: 33px;
+}
+
+.formproduct button {
+    border-radius: 10px;
+    width: 100%;
+     
+    color: #d4b0b5;
+    font-size: medium;
+    border: #d4b0b5 3px solid;
+    border-radius: 40px;
+    background-color: #1c1c39;
+}
+
+.formproduct button:hover {
+    background-color: #d4b0b5;
+    color: #1c1c39;
+    transition-duration: 0.4s;
+}
+
+.eror {
+    color: red;
+}
+
+.container select {
+    width: 70%;
+    margin-bottom: 3px;
+    font-size: medium;
+    height: 33px;
+    border-radius: 30px;
+    border: #d4b0b5 3px solid;
+    outline: none;
+    padding-left: 5px;
+}
+
+.namel {
+    height: 50px;
+}
+
+.cancelimport {
+    display: none;
+}
+
+.errorandreset {
+    display: flex;
+}
+
+.errorandreset input {
+    border-radius: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: auto;
+    border: #d4b0b5 3px solid;
+    background: url("/project_productlist/reset.png") no-repeat center;
+    background-size: 25px;
+    background-color: #d4b0b5;
+}
+
+.errorandreset input:hover {
+    background-color: plum;
+    transition-duration: 0.4s;
+}

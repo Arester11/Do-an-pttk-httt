@@ -1,0 +1,125 @@
+
+@import url('./header_search.css');
+
+/* header */
+.header {
+    background-image: linear-gradient(90deg, #B7C6F4, #EADBFF);
+    box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.422);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: 100%; height: 50px;
+    --header-icon-size: 2.3rem;
+    --header-font-size: 1.8rem;
+}
+
+.header-body {
+    display: grid;
+    grid-template-columns: 2fr 0.6fr 8fr 0.6fr 2fr;
+    gap: 10px;
+    align-items: center;
+    height: inherit;
+    
+}
+
+.header__logo {
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --logo-size: 28px;
+    --logo-font-size: 2rem;
+}
+
+.header__logo--strong-text {
+    font-size: var(--logo-font-size);
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.header__logo-img {
+    height: var(--logo-size);
+}
+
+.header__home {
+    font-size: var(--header-icon-size);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__home:hover{
+    color: rgb(1, 107, 255);
+}
+
+.header__cart {
+    cursor: pointer;
+    font-size: var(--header-icon-size);
+    color: var(--black-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__cart:hover {
+    color: rgb(1, 107, 255);
+}
+
+.header__logging {
+    display: grid;
+    grid-template-columns: 9fr 2fr 9fr;
+    gap: 5px;
+    font-size: var(--header-font-size);
+    align-items: center;
+}
+
+.header__logging--log-in, .header__logging--sign-up {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.header__logging--log-in:hover, .header__logging--sign-up:hover{
+    color: rgb(1, 107, 255);
+}
+.header__logging--separation {
+    display: block;
+    width: 1px;
+    height: 1.8rem;
+    background-color: rgba(0, 0, 0, 0.342);
+    margin-left: 8px;
+}
+
+/* ipad */
+@media screen and (max-width: 992px) {
+    .header-body {
+        grid-template-columns: 2fr 0.6fr 8fr 0.6fr 2fr;
+        gap: 6px;
+        align-items: center;
+        height: inherit;
+        --header-icon-size: 2rem;
+        --header-font-size: 1.6rem;
+    }
+}
+/* mobile */
+@media screen and (max-width: 768px) {
+    .header-body {
+        grid-template-columns: 1.4fr 0.6fr 8fr 0.6fr 2fr;
+        gap: 2px;
+        align-items: center;
+        height: inherit;
+        --header-icon-size: 1.8rem;
+        --header-font-size: 1.4rem;
+    }
+    .header__logo {
+        --logo-size: 24px;
+        --logo-font-size: 1.6rem
+    }
+}
+@media screen and (max-width: 300px) {
+    
+}

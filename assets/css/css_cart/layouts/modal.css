@@ -1,0 +1,97 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 50%;
+  height: 100%;
+}
+
+.modal__size-select {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.modal__select-size {
+  position: absolute;
+  z-index: 101;
+  background-color: white;
+  padding: 20px;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.modal__close-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.4s linear;
+}
+
+.modal__close-icon:hover {
+  color: var(--text);
+}
+
+.modal__size-heading {
+  font-size: 1.2rem;
+  color: var(--gray-500);
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.modal__size-label {
+  text-transform: uppercase;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  display: inline-block;
+  transition: all 0.3s linear;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.modal__size-label:hover {
+  color: var(--red-600);
+  background-color: var(--red-100);
+}
+
+.modal input[type="radio"]:checked + label {
+  color: var(--red-600);
+  background-color: var(--red-100);
+}
+
+.overlay {
+  position: fixed; 
+  width: 100%; 
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 100;
+  cursor: pointer; 
+}
+
+@media only screen and (max-width: 786px) {
+  .modal__select-size {
+    white-space: normal;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 576px) {
+
+}
+
+@media only screen and (max-width: 424px) {
+
+}

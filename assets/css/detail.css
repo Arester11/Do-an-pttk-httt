@@ -1,0 +1,208 @@
+/* product detail */
+.product-detail {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+}
+
+.product-detail__layout {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: inherit;
+}
+
+.product-detail__body {
+    width: 800px;
+    max-width: 80%;
+    height: 420px;
+    --detail-body-width: 800px;
+    --detail-body-height: 420px; 
+    margin: auto;
+    background-color: #e1f3fe;
+    position: relative;
+    gap: 16px;
+    --padding: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: stretch;
+    z-index: 40;
+    background-color: #e1f3fe;
+}
+
+.product-detail__img {
+    width: 48%;
+    padding-top: calc(48% - var(--padding) * 2);
+    transition: all .5s ease;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #e1f3fe;
+    background-image: url('https://bizweb.dktcdn.net/thumb/large/100/316/286/products/gan-monster-go-rubik-3x3-gia-re.jpg?v=1593666712000');
+}
+
+.product-detail__container {
+    width: 52%;
+    height: 100%;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e1f3fe;
+    display: grid;
+    grid-template-rows: 0.6fr 5fr 1fr;
+    grid-template-columns: 1fr;
+
+}
+
+.product-detail__name {
+    font-size: 2.4rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-detail__wrapper {
+    width: 100%;
+    overflow-y: auto;
+}
+.product-detail__info-table {
+    width: 100%;
+    height: 60%;
+    margin-bottom: 18px;
+}
+.product-detail__info-table, .product-detail__info-table th, .product-detail__info-table td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+.product-info__price {
+    color: red;
+}
+.product-info__decription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-detail__cart {
+    position: relative;
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 16px;
+}
+
+.product-detail-prices {
+    font-size: 2rem;
+    display: flex;
+    gap: 16px;
+}
+.product-detail-prices div {
+    font-size: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-detail-prices .cart-price {
+    font-size: 2.2rem;
+    color: red;
+    text-decoration: underline;
+}
+
+.detail-cart-button {
+    width: 120px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffc3af;
+    border-radius: 16px;
+    padding: 4px;
+    cursor: pointer;
+    
+}
+.detail-cart-button:hover {
+    border: 2px solid black;
+    background-color: #fb926f;
+}
+
+.cart__icon {
+    font-size: 3rem;
+}
+
+.detail-exit-button {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+}
+
+.detail-exit-button:hover {
+    color: white;
+    background-color: red;
+}
+
+@media screen and (max-width: 992px) {
+    .product-detail__body {
+        height: 350px;
+    }
+    .product-detail-prices {
+        gap: 10px;
+    }
+}
+
+/* doi giao dien */
+@media screen and (max-width: 768px) {
+    .product-detail__body {
+        height: 66vh;
+        overflow: scroll;
+        padding-top: 16px;
+        flex-wrap: wrap;
+        gap: 0;
+        --mode: 2;
+    }
+    .product-detail__container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    .product-detail__img {
+        width: 70%;
+        padding-top: 70%;
+        background-size: contain;
+        max-height: unset;
+        margin: 0 auto;
+    }
+    .product-detail__name {
+        margin: 16px 0;
+    }
+    .product-detail__wrapper {
+        height: unset;
+        overflow: unset;
+    }
+    .product-detail__info-table {
+        width: 100%;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .product-detail__img {
+        width: 80%;
+        padding-top: 80%;
+    }
+}

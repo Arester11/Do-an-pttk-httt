@@ -1,0 +1,228 @@
+.form{
+    border: 10px solid #d7a7a7;
+    border-radius: 30px;
+    z-index: 1;
+    position:fixed;
+    top: 20%;
+    background-color:  #B7C6F4;
+}
+.myform-2{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.title__img{
+    width: 50px;
+    height: 50px;
+}
+.RBS{
+    font-size: 50px;
+    font-weight: 7000;
+}
+.CAA{
+    font-weight: 5000;
+    font-size: 30px;
+    margin-top: 5px;
+}
+.LIGS{
+    font-weight: 2000;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.__form{
+    margin-left: 18px;
+    margin-bottom: 20px;
+}
+.size_label input{
+    margin-bottom: 10px;
+}
+.input input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+label{
+    font-size: 1.6rem;
+    display: block;
+}
+.form_input_user{
+    height: 4vh;
+    margin-top: 0px;
+    font-size: 1.5rem;
+    width: 300px;
+    border-radius: 1px;
+    border-style: hidden;
+    border-radius: 10px;
+    padding-left: 6px;
+    margin-right: 20px;
+}
+.form_input{
+    height: 4vh;
+    margin-top: 0px;
+    font-size: 1.5rem;
+    width: 300px;
+    border-radius: 1px;
+    border-style: hidden;
+    border-radius: 10px;
+    padding-left: 6px;
+}
+.form_inputs{
+    height: 4vh;
+    margin-top: 0px;
+    font-size: 1.5rem;
+    width: 300px;
+    border-radius: 1px;
+    border-style: hidden;
+    border-radius: 10px;
+    padding-left: 6px;
+}
+.A_Signup{
+    font-size: 1.05rem;
+    line-height: 1rem;
+}
+.btn_user{
+    width: 300px;
+    align-items:center;
+    font-size: medium;
+    cursor: pointer;
+    background-color:white;
+    color: black;
+    height: 4vh;
+    border-style: hidden;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.btn_user:hover {
+    background: aqua;
+}
+
+/* sign In */
+.form_1{
+    border: 10px solid #d7a7a7;
+    border-radius: 30px;
+    z-index: 1;
+    position:fixed;
+    top:20%;
+    background-color: #B7C6F4;
+}
+.myform-1{
+    width:100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.WCB{
+    font-weight: 5000;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.check {
+    color: red;
+    display: none;
+    font-size: small;
+}
+
+.unactive{
+    display:none;
+}
+
+.login{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.signup{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+
+.menu---item {
+    position: relative;
+  }
+
+  .menu---item a {
+    display: block;
+    padding: 5px 10px;
+    color: #1c1c39;
+    text-decoration: none;
+    width: 200px;
+    font-size: 20px;
+  }
+
+  .menu---item:hover {
+    color: #B7C6F4;
+  }
+  .submenu--- {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    border-top: 1px solid hidden;
+    width: 100px;
+  }
+.submenu--- a{
+    font-size: 10px;
+    width: 100px;
+}
+.submenu--- a:hover{
+    background-color: #B7C6F4;
+    color: #333;
+}
+  .menu---item:hover .submenu--- {
+    display: block;
+  }
+  .submenu---item a {
+    padding: 10px 15px;
+    color: white;
+    font-size: 10px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .submenu--- {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333;
+      border-top: 1px solid hidden;
+      width: 60px;
+    }
+    .menu---item a {
+        display: block;
+        padding: 5px 10px;
+        color: #333;
+        text-decoration: none;
+        width: 75px;
+        font-size: 15px;
+        width: fit-content;
+      }
+      .submenu---item a{
+        font-size: 10px;
+        color: white;
+    }
+  }
+
+
+
+
