@@ -1,9 +1,0 @@
-NHÓM 5
-3122410415 Dương Quốc Toàn
-3122410440 Ngô Quang Trường
-3122410309 Nguyễn Chí Phong
-3122410318 Trần Minh Phú
-3121410533 Nguyễn Thị Phương Trúc
-admin:3122
-pass:123
-link design:https://www.canva.com/design/DAFuajDBnIE/5a7ACmvG1P6DpokE64AfAw/edit?utm_content=DAFuajDBnIE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton

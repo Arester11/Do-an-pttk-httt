@@ -19,3 +19,5 @@ function addshipping(id) {
     }
     localStorage.orderList = JSON.stringify(order);
 }
+const createdAt = new Date();
+console.log(createdAt.toLocaleString())

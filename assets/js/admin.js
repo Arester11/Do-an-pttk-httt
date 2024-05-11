@@ -114,7 +114,3 @@ function User()
     document.getElementById('admin_mode').style.display='none';
     cancelimport();
 }
-function resetstat(){
-    document.getElementById('datefrom').value="";
-    document.getElementById('dateto').value="";
-}
