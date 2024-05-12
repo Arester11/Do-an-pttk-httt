@@ -4,8 +4,10 @@ function render() {
     <tr class="tableheader">
         <th class="image_order">Image</th>
         <th>Name</th>
+        <th>Borrower</th>
         <th class="quantity">Quantity</th>
         <th class="total">Total</th>
+        <th>Borrowed time</th>
         <th class="edit">Edit</th>
     </tr>
     `;
@@ -24,8 +26,10 @@ function render() {
             <tr>
                 <td class="imagetd"><img src="${order.imagePrimary}" width="120" height="120"></td>
                 <td>${order.name}</td>
+                <td>${order.receiver}</td>
                 <td>${order.count}</td>
                 <td>${total_product}</td>
+                <td>${order.createdAt}</td>
                 <td class="edittd">
                     <button class="buttontd" onclick="tick(${temp})"><i class="far fa-trash-alt"></i></button>
                     <button class="buttontd" onclick="confirm(${temp})"><i class="fas fa-check-circle"></i></button>
@@ -48,9 +52,11 @@ function rendershipping() {
     <tr class="tableheader">
         <th class="image_order">Image</th>
         <th>Name</th>
+        <th>Borrower</th>
         <th class="quantity">Quantity</th>
         <th class="total">Total</th>
-        <th class="edit">Edit</th>
+        <th>Payment time</th>
+        <th class="edit">Check</th>
     </tr>
     `;
     order.forEach((order, index) => {
@@ -68,8 +74,10 @@ function rendershipping() {
             <tr>
                 <td class="imagetd"><img src="${order.imagePrimary}" width="120" height="120"></td>
                 <td>${order.name}</td>
+                <td>${order.receiver}</td>
                 <td>${order.count}</td>
                 <td>${total_product}</td>
+                <td>${order.createdback}</td>
                 <td class="edittd">
                 <button class="buttontd" onclick="removeshipping (${temp})"><i class="fas fa-dollar-sign"></i></button>
                 </td>
@@ -90,9 +98,10 @@ function rendermoney(){
     <tr class="tableheader">
         <th class="image_order">Image</th>
         <th>Name</th>
+        <th>Borrower</th>
         <th class="quantity">Quantity</th>
         <th class="total">Total</th>
-        <th class="edit">Edit</th>
+        <th class="edit">Check</th>
     </tr>
     `;
     order.forEach((order, index) => {
@@ -110,6 +119,7 @@ function rendermoney(){
             <tr>
                 <td class="imagetd"><img src="${order.imagePrimary}" width="120" height="120"></td>
                 <td>${order.name}</td>
+                <td>${order.receiver}</td>
                 <td>${order.count}</td>
                 <td>${total_product}</td>
                 <td class="edittd">

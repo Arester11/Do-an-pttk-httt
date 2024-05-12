@@ -1,9 +1,11 @@
 function addshipping(id) {
+    const createdback = Date.now();
     let order = localStorage.orderList ? JSON.parse(localStorage.orderList) : [];
     order[id] = {
         address: order[id].address,
         count: order[id].count,
         createdAt: order[id].createdAt,
+        createdback: new Date(createdback).toLocaleDateString(),
         desc: order[id].desc,
         id: order[id].id,
         imagePrimary: order[id].imagePrimary,
@@ -19,5 +21,4 @@ function addshipping(id) {
     }
     localStorage.orderList = JSON.stringify(order);
 }
-const createdAt = new Date();
-console.log(createdAt.toLocaleString())
+

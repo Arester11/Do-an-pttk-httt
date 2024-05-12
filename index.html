@@ -165,12 +165,10 @@
                             <select id="sort" onchange="sortlist()">
                                 <option>All</option>
                                 <option>Classic</option>
-                                <option>Variant</option>
-                                <option>Accessories</option>
                             </select>
                         </div>
                         <div class="import">
-                            <button onclick="showimport()" id="showcontain">Import</button>
+                            <button onclick="showimport()" id="showcontain">Add</button>
                             <button onclick="cancelimport()" id="cancelcontain" class="cancelimport">Cancel</button>
                         </div>
                     </div>
@@ -232,7 +230,7 @@
                                         <div><span id="eror-prePrice" class="eror"></span></div>
                                         <div><span id="eror-salePercent" class="eror"></span></div>
                                     </div>
-                                    <input id="resetform" type="reset" value="" src="reset.png">
+                                    <button id="resetform" class="fa fa-refresh" type="reset" value="">
                                 </div>
                             </div>
                         </form>

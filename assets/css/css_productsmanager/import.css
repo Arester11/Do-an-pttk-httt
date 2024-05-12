@@ -93,19 +93,18 @@
     display: flex;
 }
 
-.errorandreset input {
+.errorandreset button {
     border-radius: 15px;
     width: 40px;
     height: 40px;
-    line-height: 40px;
+    line-height: 34px;
     margin-left: auto;
     border: #d4b0b5 3px solid;
-    background: url("/project_productlist/reset.png") no-repeat center;
     background-size: 25px;
-    background-color: #d4b0b5;
+    background-color: #1c1c39;
 }
 
-.errorandreset input:hover {
+.errorandreset button:hover {
     background-color: plum;
     transition-duration: 0.4s;
 }
