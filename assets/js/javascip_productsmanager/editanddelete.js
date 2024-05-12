@@ -50,11 +50,7 @@ function changelist(id) {
         document.getElementById('eror-imagePrimary').innerHTML = '';
     }
     /////
-    if (imageSecondary.trim().length == 0) {
-        imageSecondary = '';
-        document.getElementById('eror-imageSecondary').innerHTML = '*Please add images 2';
-    }
-    else if (imageSecondary.trim().length < 2) {
+    if (imageSecondary.trim().length < 2) {
         imageSecondary = '';
         document.getElementById('eror-imageSecondary').innerHTML = '*Please Enter Full Information';
     }

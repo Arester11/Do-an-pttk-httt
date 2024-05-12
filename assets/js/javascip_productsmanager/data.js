@@ -9,8 +9,6 @@ const productList = [
     author:"Dale Carnegie",
     imagePrimary:
       "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-dac-nhan-tam.jpg",
-    imageSecondary:
-      "",
   },
   {
     id: 2,
@@ -21,8 +19,6 @@ const productList = [
     author:"Paulo Coelho",
     imagePrimary:
       "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-nha-gia-kim.jpg",
-    imageSecondary:
-      ""
   },
   {
     id: 3,
@@ -32,9 +28,7 @@ const productList = [
     type: "Classic",
     author:"Fyodor Dostoevsky",
     imagePrimary:
-      "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-toi-ac-va-hinh-phat.jpg",
-    imageSecondary:
-      ""  
+      "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-toi-ac-va-hinh-phat.jpg",  
   },
   {
     id: 4,
@@ -45,8 +39,6 @@ const productList = [
     author:"Liêu Trí Phong",
     imagePrimary:
       "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-moi-lan-vap-nga-la-mot-lan-truong-thanh.jpg",
-    imageSecondary:
-      ""
   },
   {
     id: 5,
@@ -57,8 +49,6 @@ const productList = [
     author:"Rosie Nguyễn",
     imagePrimary:
       "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-tuoi-tre-dang-gia-bao-nhieu.jpg",
-    imageSecondary:
-      ""
   },
   {
     id: 6,
@@ -70,8 +60,6 @@ const productList = [
     author:"Andrew Matthews",
     imagePrimary:
       "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-doi-thay-doi-khi-chung-ta-thay-doi.jpg",
-    imageSecondary:
-      ""
   },
   {
     id: 7,
@@ -83,8 +71,6 @@ const productList = [
     author:"Robert Kiyosaki",
     imagePrimary:
       "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-day-con-lam-giau.jpg",
-    imageSecondary:
-      ""
   },
   {
     id: 8,
@@ -96,8 +82,6 @@ const productList = [
     author:"Edmondo De Amicis",
     imagePrimary:
       "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-nhung-tam-long-cao-ca.jpg",
-    imageSecondary:
-      ""
   },
   {
     id: 9,
@@ -109,8 +93,6 @@ const productList = [
     author:"Robin Sharma",
     imagePrimary:
       "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-nha-lanh-dao-khong-chuc-danh.jpg",
-    imageSecondary:
-      ""
   },
   {
     id: 10,
@@ -122,8 +104,6 @@ const productList = [
     author:"Nguyễn Nhật Ánh",
     imagePrimary:
       "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-cho-toi-xin-mot-ve-di-tuoi-tho.jpg",
-    imageSecondary:
-      ""
   },
   {
     id: 11,
@@ -135,8 +115,6 @@ const productList = [
     author:"Nguyễn Nhật Ánh",
     imagePrimary:
       "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-cho-toi-xin-mot-ve-di-tuoi-tho.jpg",
-    imageSecondary:
-      ""
   },
   {
     id: 12,
@@ -148,8 +126,6 @@ const productList = [
     author:"Nguyễn Nhật Ánh",
     imagePrimary:
       "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-cho-toi-xin-mot-ve-di-tuoi-tho.jpg",
-    imageSecondary:
-      ""
   },
   {
     id: 13,
@@ -161,8 +137,6 @@ const productList = [
     author:"Nguyễn Nhật Ánh",
     imagePrimary:
       "https://isachhay.net/wp-content/uploads/2017/08/sach-hay-cho-toi-xin-mot-ve-di-tuoi-tho.jpg",
-    imageSecondary:
-      ""
   },
 ];
 

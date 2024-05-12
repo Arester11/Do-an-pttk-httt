@@ -18,8 +18,7 @@ el.addEventListener("click", function() {
         else {
             classic = classic + (Number(moneymoney.prePrice) - (Number(moneymoney.prePrice) * Number(moneymoney.salePercent) / 100)) * Number(moneymoney.count);
         }
-        console.log(classic)
     })
-    total = classic;
+    total = classic.toFixed(2);
     document.getElementById('total_stat').innerHTML = total + '$';
-}); 
+});

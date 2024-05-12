@@ -164,14 +164,9 @@ export function renderDetail(product) {
 
     productDetail.style.display = "flex";
     img.style.backgroundImage = `url(${product.imagePrimary})`;
-    img.addEventListener("mouseover", e => {
-        img.style.backgroundImage = `url(${product.imageSecondary})`;
-    })
-    img.addEventListener("mouseout", e => {
-        img.style.backgroundImage = `url(${product.imagePrimary})`;
-    })
     productDetail.querySelector(".product-detail-prices").innerHTML = detailPriceHTML;
     productDetail.querySelector(".product-detail__name").innerHTML = product.name;
+    productDetail.querySelector(".detail-brand").innerHTML = product.author;
     productDetail.querySelector(".product-detail__decription ").innerHTML = product.desc;
     productDetail.querySelector(".detail__product-type").innerHTML = product.type;
 

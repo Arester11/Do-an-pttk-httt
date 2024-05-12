@@ -60,7 +60,9 @@ filterForm.addEventListener("submit", e => {
     let from = Number(filterForm["from"].value);
     let to = Number(filterForm["to"].value);
     let productName = filterForm["product_name"].value;
+    let productAuthor = filterForm["author"].value;
     let nameRegex = new RegExp(productName.trim(), 'i');
+    let authorRegex = new RegExp(productAuthor.trim(), 'i');
 
     results = products.filter(product => {
         let checkRange;
@@ -79,6 +81,7 @@ filterForm.addEventListener("submit", e => {
         else checkType = false;
 
         return product.name.search(nameRegex) >= 0
+        &&product.author.search(authorRegex) >= 0
         && checkType
         && (useRange.checked? checkRange : true)
         && (filterForm["on-sale"].checked? product.salePrice : true);
